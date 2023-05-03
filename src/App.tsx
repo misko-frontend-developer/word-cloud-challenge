@@ -1,23 +1,16 @@
 
-
+import useGitHubGistFile from "./hooks/useGitHubGistFile";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
 
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+  const { data, error }: any = useGitHubGistFile('5d6de0be7caa73dcdd602f61cede1421', 'topics.json')
+  // console.log(data)
+  return (
+    <div >
+
+      {data.map((d: any) =>
+        <div>{d.label}</div>)}
     </div>
   );
 }
