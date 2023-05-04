@@ -1,17 +1,14 @@
-
-import useGitHubGistFile from "./hooks/useGitHubGistFile";
+import { Box, Title } from "@mantine/core";
+import { WordCloud } from "./coomponents/WordCloud";
 
 function App() {
-
-
-  const { data, error }: any = useGitHubGistFile('5d6de0be7caa73dcdd602f61cede1421', 'topics.json')
-  // console.log(data)
   return (
-    <div >
-
-      {data.map((d: any) =>
-        <div>{d.label}</div>)}
-    </div>
+    <Box p={50}>
+      <Title ta='center' my={40}>
+        My Topics challenge
+      </Title>
+      <WordCloud />
+    </Box>
   );
 }
 

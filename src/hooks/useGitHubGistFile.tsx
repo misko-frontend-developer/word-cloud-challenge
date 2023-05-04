@@ -1,8 +1,8 @@
-import { useState, useEffect } from 'react';
-import TopicData from '../interfaces/TopicData';
+import { useState, useEffect } from "react";
+import TopicData from "../interfaces/TopicData";
 const useGitHubGistFile = (gistId: string, filename: string) => {
     const [data, setData] = useState<TopicData[]>([]);
-    const [error, setError] = useState<string>('');
+    const [error, setError] = useState<string>("");
 
     useEffect(() => {
         const fetchFile = async () => {
@@ -14,9 +14,8 @@ const useGitHubGistFile = (gistId: string, filename: string) => {
                 if (file) {
                     const contentResponse = await fetch(file.raw_url);
                     const content = await contentResponse.json();
-                    setData(content[filename.split('.')[0]]);
+                    setData(content[filename.split(".")[0]]);
                 } else {
-
                     setError(`File '${filename}' not found in Gist`);
                 }
             } catch (error: any) {
