@@ -8,14 +8,13 @@ The Word Cloud Project is an application that displays a word cloud from data fe
 
 To install the Word Cloud Project, clone the repository and run the following command:
 
-Copy code
+
 npm install
 💻 Usage
 
 To run the application, execute the following command:
 
-sql
-Copy code
+
 npm start
 The application will fetch data from the Github Gist and display the word cloud.
 
@@ -25,8 +24,6 @@ When a label is clicked, metadata about the topic is displayed, including the to
 
 One test is included in the tests folder that tests fetching data from the Github Gist. To run the test, execute the following command:
 
-bash
-Copy code
 npm test
 📃 Conclusion
 
